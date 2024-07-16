@@ -16,13 +16,30 @@ header {
 }
 
 /* Navbar styling */
+.menu{
+    display: none;
+    height: 50px;
+    width: 50px;
+}
+#close{
+    display: none;
+    filter: invert();
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
     margin-top: 87px;
     align-items: center;
 }
-
+.nav-items{
+    display: flex;
+    gap: 34px;
+    transition: all 300ms ease-in-out;
+}
 .navbar h3 {
     color: rgb(58, 58, 58);
     font-size: 1.5rem;
@@ -103,14 +120,15 @@ header {
     margin: 0 auto;
     border-top: 1px solid rgba(0, 0, 0, 0.048);
     border-bottom: 1px solid rgba(0, 0, 0, 0.048);
-    padding: 40px;
+    padding: 35px 0px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 69px;
-    gap: 2rem;
+    gap: 32px;
     flex-wrap: wrap;
 }
+
 
 /* Collection section styling */
 .collection {
@@ -197,6 +215,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
 }
 .featured-img img{
     width: 100%;
@@ -260,11 +279,35 @@ footer {
     margin-top: 17px;
 }
 /* for small devices */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 640px) {
+    .menu{
+        display: block;
+    }
     .navbar {
+        justify-content: space-around;
+        margin-top: 35px;
+        align-items: center;
+    }
+    .nav-items{
+        position: absolute;
+        padding: 100px;
+        top: 0;
+        left: -400px;
+        background: #000000d5;
+        height: 100%;
+        width: 300px;
+        color: white;
         flex-direction: column;
     }
-
+    ul .nav-items li a{
+        color: white;
+    }
+    .navbar ul li i{
+        font-size: 3rem;
+    }
+    #close{
+        display: block;
+    }
     .banner {
         background-position: center top;
     }
@@ -275,14 +318,17 @@ footer {
     }
 
     .banner-text {
-        margin-top: 50px;
+        margin-top: 150px;
         text-align: center;
+        padding: 5px;
     }
 
     .banner-text h2 {
         font-size: 2rem;
     }
-
+    .sponsor img{
+        width: 15%;
+    }
     .cards {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -290,5 +336,28 @@ footer {
     .featured-text {
         text-align: center;
         margin-bottom: 30px;
+    }
+}
+
+
+/* medium size */
+@media screen and (min-width:640px) and (max-width:1024px){
+    .banner {
+        background-size: 600px;
+        background-position: center top;
+    }
+    .banner-content {
+        flex-direction: column-reverse;
+    }
+    .banner-img{
+        margin-top: 70px;
+    }
+    .banner-text {
+        margin-top: 150px;
+        text-align: center;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2,1fr);
     }
 }
