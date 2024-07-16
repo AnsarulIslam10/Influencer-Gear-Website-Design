@@ -92,11 +92,13 @@ header {
     font-size: 1rem;
     font-weight: 700;
 }
-.banner-img img{
+
+.banner-img img {
     width: 100%;
 }
+
 /* sponson section styling */
-.sponsor{
+.sponsor {
     max-width: 1440px;
     margin: 0 auto;
     border-top: 1px solid rgba(0, 0, 0, 0.048);
@@ -110,22 +112,96 @@ header {
     flex-wrap: wrap;
 }
 
+/* Collection section styling */
+.collection {
+    max-width: 1047px;
+    margin: 100px auto;
+}
+
+.collection>h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(58, 58, 58);
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 17px 15px;
+}
+
+.card h3 {
+    color: rgb(24, 25, 31);
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+.card h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.card p {
+    width: 196px;
+    color: rgb(120, 120, 133);
+    font-size: 0.87rem;
+    font-weight: 700;
+    line-height: 143%;
+    letter-spacing: 1.8%;
+
+}
+
+.card .star {
+    font-size: 0.75rem;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.card .star .checked {
+    color: rgb(251, 130, 0);
+}
 
 /* for small devices */
 @media screen and (max-width: 576px) {
-    .navbar{
+    .navbar {
         flex-direction: column;
     }
-    .banner{
+
+    .banner {
         background-position: center top;
-        background-size: auto;
     }
-    .banner-content{
+
+    .banner-content {
         flex-direction: column-reverse;
     }
-    .banner-text{
+
+    .banner-text {
         margin-top: 50px;
-        padding: 14px;
+        padding: 20px;
         text-align: center;
+        width: 350px;
+    }
+    .banner-text h2{
+        font-size: 2rem;
+    }
+    .cards{
+        grid-template-columns: repeat(1,1fr);
     }
 }
+
