@@ -198,7 +198,9 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
+.featured-img img{
+    width: 100%;
+}
 .featured-text h2 {
     color: rgb(10, 8, 38);
     font-size: 2.37rem;
@@ -226,6 +228,37 @@ header {
 
 }
 
+/* Footer styling */
+footer {
+    background: #0a0826;
+}
+
+.footer {
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+
+}
+
+.footer-text h2 {
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer-text p {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(217, 219, 225);
+}
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.56rem;
+    margin-top: 17px;
+}
 /* for small devices */
 @media screen and (max-width: 576px) {
     .navbar {
@@ -236,11 +269,12 @@ header {
         background-position: center top;
     }
 
-    .banner-content, .featured-content {
+    .banner-content,
+    .featured-content {
         flex-direction: column-reverse;
     }
 
-    .banner-text{
+    .banner-text {
         margin-top: 50px;
         text-align: center;
     }
@@ -252,7 +286,8 @@ header {
     .cards {
         grid-template-columns: repeat(1, 1fr);
     }
-    .featured-text{
+
+    .featured-text {
         text-align: center;
         margin-bottom: 30px;
     }
