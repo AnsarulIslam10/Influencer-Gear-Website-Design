@@ -109,3 +109,23 @@ header {
     gap: 2rem;
     flex-wrap: wrap;
 }
+
+
+/* for small devices */
+@media screen and (max-width: 576px) {
+    .navbar{
+        flex-direction: column;
+    }
+    .banner{
+        background-position: center top;
+        background-size: auto;
+    }
+    .banner-content{
+        flex-direction: column-reverse;
+    }
+    .banner-text{
+        margin-top: 50px;
+        padding: 14px;
+        text-align: center;
+    }
+}
