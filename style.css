@@ -92,5 +92,20 @@ header {
     font-size: 1rem;
     font-weight: 700;
 }
-
-/*  */
+.banner-img img{
+    width: 100%;
+}
+/* sponson section styling */
+.sponsor{
+    max-width: 1440px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.048);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 69px;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
